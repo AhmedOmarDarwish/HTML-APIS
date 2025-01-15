@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show My Location on Map</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>My Location on Map</h1>
+      <p>Click the button to find your location and view it on a map.</p>
+      <button onclick="getMyLocation()">Show My Location</button>
+      <div id="status">Press the button to start!</div>
+      <iframe id="map" frameborder="0" alt="Map.."></iframe>
+    </div>
+
+    <hr />
+
+    <div>
+      <h1>Drag and Drop Game</h1>
+      <p>Drag the image into the rectangle:</p>
+
+      <div class="rectangleDiv">
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img
+            id="imageDrag"
+            src="Img/Image.jpg"
+            draggable="true"
+            ondragstart="drag(event)"
+          />
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+    </div>
+    <hr />
+
+    <div>
+      <h1>Complete the Puzzle!</h1>
+      <p>Drag the image into the rectangle:</p>
+      <div id="puzzle-area">
+        <div class="dropzone" data-piece="1"></div>
+        <div class="dropzone" data-piece="2"></div>
+        <div class="dropzone" data-piece="3"></div>
+      </div>
+      <div id="pieces">
+        <img
+          src="Img/piece3.jpg"
+          class="piece"
+          draggable="true"
+          data-piece="3"
+          alt="Piece 3"
+        />
+        <img
+          src="Img/piece1.jpg"
+          class="piece"
+          draggable="true"
+          data-piece="1"
+          alt="Piece 1"
+        />
+        <img
+          src="Img/piece2.jpg"
+          class="piece"
+          draggable="true"
+          data-piece="2"
+          alt="Piece 2"
+        />
+      </div>
+      <div id="win-message">🎉 You completed the puzzle! 🎉</div>
+      <div id="win-Game-number">🎉 You Win 0 Game(s)! 🎉</div>
+      <button id="replay" onclick="initGame();">Replay</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
